@@ -1,0 +1,160 @@
+.rodape {
+    padding: 3.75rem 12.5%;
+    background-color: var(--cor-links);
+}
+
+.rodape__linha {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.rodape__linha:last-child {
+    border-top: 1.5px solid var(--cor-destaque-secundario);
+    padding-top: 2rem;
+    grid-template-columns: repeat(2, auto);
+}
+
+.rodape__coluna__logo {
+    width: 79.61px;
+    height: 48px;
+}
+
+.rodape__coluna__subtitulo {
+    font-family: var(--fonte-texto);
+    color: var(--cor-destaque-secundario);
+    margin-top: 1.5rem;
+}
+
+.rodape__coluna__titulo {
+    font-family: var(--fonte-texto);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--cor-texto);
+    margin-bottom: 1rem;
+}
+
+.rodape__coluna__lista__item,
+.rodape__coluna__lista__link {
+    font-family: var(--fonte-texto);
+    line-height: 120%;
+    color: var(--cor-texto);
+    text-decoration: none;
+}
+
+.rodape__coluna__lista__item {
+    margin-bottom: .5rem;
+}
+
+.rodape__coluna__lista__item:last-child {
+    margin-bottom: 0;
+}
+
+.rodape__coluna__lista-pagamentos {
+    display: inline-grid;
+    grid-template-columns: repeat(5, auto);
+    gap: 1rem;
+}
+
+.rodape__coluna__lista-redes {
+    display: inline-grid;
+    grid-template-columns: repeat(3, auto);
+    gap: .5rem;
+}
+
+@media screen and (max-width:768px) {
+    .rodape {
+        padding: 2.5rem 7%;
+    }
+
+    .rodape__linha:first-child {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        "logo logo logo"
+        "funcionamento institucional informacoes";
+        justify-content: space-between;
+        column-gap: 4.25rem;
+    }
+
+    .rodape__linha:first-child .rodape__coluna:nth-child(2) {
+        grid-area: funcionamento;
+    }
+
+    .rodape__linha:first-child .rodape__coluna:nth-child(3) {
+        grid-area: institucional;
+    }
+
+    .rodape__linha:first-child .rodape__coluna:nth-child(4) {
+        grid-area: informacoes;
+    }
+
+    .rodape__coluna--logo {
+        grid-area: logo;
+        text-align: center;
+        padding-bottom: 2.5rem;
+        margin-bottom: 2.5rem;
+        border-bottom: 1.5px solid var(--cor-destaque-secundario);
+    }
+
+    .rodape__linha:last-child {
+        border: none;
+        padding-top: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 360px) {
+    .rodape {
+        padding: 3.75rem;
+    }
+
+    .rodape__linha:first-child {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "logo"
+        "funcionamento"
+        "institucional"
+        "informacoes";
+    }
+
+    .rodape__coluna:nth-child(2),
+    .rodape__coluna:nth-child(3) {
+        margin-bottom: 1.5rem;
+    }
+
+    .rodape__linha:last-child {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "pagamentos"
+        "redes";
+        row-gap: 2rem;
+    }
+
+    .rodape__coluna--pagamentos {
+        grid-area: pagamentos;
+    }
+
+    .rodape__coluna--redes {
+        grid-area: redes;
+    }
+
+    .rodape__coluna__lista-redes {
+        padding-left: 20%;
+    }
+
+    .rodape__linha--direitos {
+        padding: 1.875rem 1.5rem;
+        text-align: center;
+        width: 100%;
+        background-color: var(--cor-de-fundo);
+    }
+
+    .rodape__linha--direitos__texto {
+        font-family: var(--fonte-texto);
+        font-size: .75rem;
+        color: var(--cor-links);
+    }
+}
