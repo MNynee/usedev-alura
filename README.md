@@ -1,7 +1,7 @@
 
 # Projeto desenvolvido em curso de prática de layouts responsivos com grid na Alura.
 
-<img src="./assets/imagem-README1.png">
+<img src="./assets/imagem-README1.png" width="500px">
 <img src="./assets/imagem-README2.png" height="400px"> <img src="./assets/imagem-README3.png" height="400px"> <img src="./assets/imagem-README4.png" height="400px">
 
 Página inicial da loja UseDev.
